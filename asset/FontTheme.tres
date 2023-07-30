@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://24gn8ks4tnnx"]
+
+[ext_resource type="FontFile" uid="uid://ohyjtysw1qwj" path="res://asset/EvilEmpire-4BBVK.ttf" id="1_qvcml"]
+
+[resource]
+default_font = ExtResource("1_qvcml")
+default_font_size = 30

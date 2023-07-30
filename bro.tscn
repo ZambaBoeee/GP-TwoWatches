@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0c4bo4xcxwp"]
+
+[ext_resource type="Script" path="res://bro.gd" id="1_ips26"]
+
+[node name="bro" type="Node2D"]
+script = ExtResource("1_ips26")
+
+[node name="Start" type="Button" parent="."]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 256.0
+offset_top = 59.0
+offset_right = 302.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Start"
+
+[node name="Pause" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 100.0
+offset_right = 352.0
+offset_bottom = 131.0
+text = "Pause Both"
+
+[node name="SwapActive" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 177.0
+offset_right = 357.0
+offset_bottom = 208.0
+text = "Swap Active"
+
+[node name="Watch1" type="Label" parent="."]
+offset_left = 95.0
+offset_top = 177.0
+offset_right = 135.0
+offset_bottom = 200.0
+text = "0:0:0"
+
+[node name="Watch2" type="Label" parent="."]
+offset_left = 471.0
+offset_top = 177.0
+offset_right = 511.0
+offset_bottom = 203.0
+text = "0:0:0"
+
+[node name="Resume" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 140.0
+offset_right = 326.0
+offset_bottom = 171.0
+text = "Resume"
+
+[node name="ActiveStatus" type="Label" parent="."]
+offset_left = 152.0
+offset_top = 250.0
+offset_right = 254.0
+offset_bottom = 276.0
+text = "active watch:"
+
+[node name="sec" type="Timer" parent="."]
+
+[node name="Reset" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="SwapActive" to="." method="_on_swap_active_pressed"]
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="timeout" from="sec" to="." method="_on_sec_timeout"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
